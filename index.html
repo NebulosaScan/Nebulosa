@@ -1,42 +1,62 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nebulosa</title>
   <style>
-      body {
-  background: url('https://i.imgur.com/hxp14oZ.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-    }
-     <header>
-  <div class="menu">
-    <h1>Nebulosa</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
-    header {
-      background-color: #ffffff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
+    body {
+      background: url('https://i.imgur.com/hxp14oZ.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: sans-serif;
       margin: 0;
+      padding: 0;
     }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(20, 20, 30, 0.85);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .menu h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .menu nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu nav a:hover {
+      color: #ccc;
+    }
+
+    main {
+      padding-top: 80px; /* espaço pro menu não cobrir conteúdo */
+    }
+
     .manga-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
       padding: 2rem;
     }
+
     .manga-card {
       background-color: #fff;
       border-radius: 8px;
@@ -44,38 +64,54 @@
       text-align: center;
       overflow: hidden;
       transition: transform 0.2s ease;
+      color: #000;
     }
+
     .manga-card:hover {
       transform: scale(1.02);
     }
+
     .manga-card img {
       width: 100%;
       height: 250px;
       object-fit: cover;
     }
+
     .manga-card h2 {
       margin: 0.5rem;
       font-size: 1.1rem;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #eee;
       font-size: 0.9rem;
+      color: #000;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Nebulosa</h1>
+    <div class="menu">
+      <h1>Nebulosa</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="manga-list">
-    <a href="nevoa-estelar/capitulo-1.html" class="manga-card">
-      <img src="https://i.imgur.com/8QzK5Ig.jpg" alt="Névoa Estelar">
-      <h2>Névoa Estelar</h2>
-    </a>
-  </section>
+  <main>
+    <section class="manga-list">
+      <a href="nevoa-estelar/capitulo-1.html" class="manga-card">
+        <img src="https://i.imgur.com/8QzK5Ig.jpg" alt="Névoa Estelar">
+        <h2>Névoa Estelar</h2>
+      </a>
+    </section>
+  </main>
 
   <footer>
     Site feito por você com ajuda da Lumi - 2025
