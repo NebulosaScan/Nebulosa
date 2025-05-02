@@ -13,6 +13,41 @@
   margin: 0;
   padding: 0;
     }
+    .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(20, 20, 30, 0.85);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.menu h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu nav a:hover {
+  color: #ccc;
+}
+
+main {
+  padding-top: 80px; /* espaço pra não cobrir o conteúdo */
+}
      <header>
   <div class="menu">
     <h1>Nebulosa</h1>
